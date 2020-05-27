@@ -1,0 +1,8 @@
+{
+  "name": "never-say-never",
+  "version": "1.0.0",
+  "description": "A TypeScript demo.",
+  "author": "Samir Talwar <samir@noodlesandwich.com",
+  "license": "MIT",
+  "main": "index.js"
+}
