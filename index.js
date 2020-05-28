@@ -53,7 +53,7 @@ const run = computation => {
     );
     if (next.length == 0) {
       throw new Error(
-        `Cannot resolve dependencies for: ${toCompute.join(", ")}`,
+        `Cannot resolve dependencies for: ${Array.from(toCompute).join(", ")}`,
       );
     }
     for (const name of next) {
@@ -65,6 +65,10 @@ const run = computation => {
 };
 
 if (require.main === module) {
+  if (process.argv.length !== 5) {
+    console.error(`Usage: ${process.argv[1]} A B C`);
+    process.exit(1);
+  }
   const a = process.argv[2];
   const b = process.argv[3];
   const c = process.argv[4];
